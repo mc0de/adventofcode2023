@@ -37,27 +37,23 @@ def part_2():
 
     with open('day4/input', 'r') as f:
         lines = [x.strip() for x in f.readlines()]
-    mm.append(len(lines))
 
     repeater = defaultdict(def_val)
 
-    for i, line in enumerate(lines):
+    for line in lines:
         c, numbers = line.split(':')
         card = int(c.split()[1])
         winning, have = numbers.split('|')
         winning = re.sub(r'\s+', ' ', winning).split()
         have = re.sub(r'\s+', ' ', have).split()
 
-        while repeater[card] >= 1:
-            matches = 0
-            for x in winning:
-                if x in have:
-                    matches += 1
-            mm.append(matches)
+        matches = 0
+        for x in winning:
+            if x in have:
+                matches += 1
 
-            for x in range(1, min(matches + 1, len(lines))):
-                repeater[card + x] += 1
-
-            repeater[card] -= 1
+        for x in range(1, min(matches + 1, len(lines))):
+            repeater[card + x] += repeater[card]
+        mm.append(repeater[card])
 
     print(sum(mm))

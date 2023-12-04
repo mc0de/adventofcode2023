@@ -1,5 +1,6 @@
-import day4.solve
+from day6 import solve
+
 
 if __name__ == '__main__':
-    day4.solve.part_2()
+    solve.part_2()
 
