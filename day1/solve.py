@@ -4,7 +4,9 @@ def part_1():
         for line in f:
             digits = [c for c in line if c in '0123456789']
             calibration_codes.append(int(digits[0] + digits[-1]))
-    print(sum(calibration_codes))
+    answer = sum(calibration_codes)
+    assert answer == 54338
+    print(answer)
 
 
 def translate(line):
@@ -28,4 +30,6 @@ def find_digit(line, i):
 def part_2():
     with open('day1/input', 'r') as f:
         calibration_codes = [int(find_digit(line, 0) + find_digit(line, -1)) for line in f]
-    print(sum(calibration_codes))
+    answer = sum(calibration_codes)
+    assert answer == 53389
+    print(answer)

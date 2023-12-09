@@ -53,7 +53,9 @@ def part_1():
                 tmp = ''
                 should_count = False
 
-    print(sum(codes))
+    answer = sum(codes)
+    assert answer == 533775
+    print(answer)
 
 
 def has_gear(x, y):
@@ -110,4 +112,6 @@ def part_2():
                 tmp = ''
                 should_count = False
 
-    print(sum([v[0] * v[1] for k, v in starmap.items() if len(v) == 2]))
+    answer = sum([v[0] * v[1] for k, v in starmap.items() if len(v) == 2])
+    assert answer == 78236071
+    print(answer)

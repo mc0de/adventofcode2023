@@ -22,7 +22,9 @@ def part_1():
                     break
         locs.append(seed)
 
-    print(min(locs))
+    answer = min(locs)
+    assert answer == 424490994
+    print(answer)
 
 
 def part_2():
@@ -49,6 +51,7 @@ def part_2():
         seed_ranges.append(range(start, start + l))
 
     lrange = range(0, 999_999_999)
+    answer = None
 
     for loc in lrange:
         l_cpy = loc
@@ -59,5 +62,9 @@ def part_2():
                     break
         for ss in seed_ranges:
             if l_cpy in ss:
-                print(loc)
-                exit()
+                answer = loc
+                break
+        if answer:
+            break
+    assert answer == 15290096
+    print(answer)

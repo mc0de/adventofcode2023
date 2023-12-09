@@ -15,6 +15,7 @@ def part_1():
             if distance > record:
                 ways += 1
         score *= ways
+    assert score == 140220
     print(score)
 
 
@@ -28,4 +29,5 @@ def part_2():
         distance = x * (time - x)
         if distance > record:
             ways += 1
+    assert ways == 39570185
     print(ways)

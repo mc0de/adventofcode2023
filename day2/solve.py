@@ -22,7 +22,9 @@ def part_1():
             if all([colors['red'] <= lim['red'], colors['green'] <= lim['green'], colors['blue'] <= lim['blue']]):
                 game_ids.append(game_id)
 
-    print(sum(game_ids))
+    answer = sum(game_ids)
+    assert answer == 2369
+    print(answer)
 
 
 def part_2():
@@ -43,4 +45,6 @@ def part_2():
                     colors[color] = max(int(amount), colors[color])
             powers.append(colors['red'] * colors['green'] * colors['blue'])
 
-    print(sum(powers))
+    answer = sum(powers)
+    assert answer == 66363
+    print(answer)

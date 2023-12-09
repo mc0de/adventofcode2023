@@ -20,7 +20,9 @@ def part_1():
                         score *= 2
             scores.append(score)
 
-    print(sum(scores))
+    answer = sum(scores)
+    assert answer == 17803
+    print(answer)
 
 
 def search(q, lines):
@@ -56,4 +58,6 @@ def part_2():
             repeater[card + x] += repeater[card]
         mm.append(repeater[card])
 
-    print(sum(mm))
+    answer = sum(mm)
+    assert answer == 5554894
+    print(answer)

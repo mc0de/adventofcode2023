@@ -57,6 +57,7 @@ def part_1():
         score += x[1] * ll
         ll -= 1
 
+    assert score == 248422077
     print(score)
 
 
@@ -141,4 +142,5 @@ def part_2():
         score += x[1] * ll
         ll -= 1
 
+    assert score == 249817836
     print(score)
