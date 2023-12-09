@@ -7,6 +7,7 @@ import day4.solve as d4
 import day5.solve as d5
 import day6.solve as d6
 import day7.solve as d7
+import day8.solve as d8
 
 if __name__ == '__main__':
     # d1.part_1()
@@ -21,5 +22,7 @@ if __name__ == '__main__':
     # d5.part_2()  # ugly, brute-forced
     # d6.part_1()
     # d6.part_2()  # not optimal, fast enough
-    d7.part_1()
-    d7.part_2()
+    # d7.part_1()
+    # d7.part_2()
+    d8.part_1()
+    d8.part_2()
