@@ -10,6 +10,7 @@ import day7.solve as d7
 import day8.solve as d8
 import day9.solve as d9
 import day10.solve as d10
+import day11.solve as d11
 
 if __name__ == '__main__':
     # d1.part_1()
@@ -30,5 +31,7 @@ if __name__ == '__main__':
     # d8.part_2()
     # d9.part_1()
     # d9.part_2()
-    d10.part_1()
-    d10.part_2()
+    # d10.part_1()
+    # d10.part_2()
+    d11.part_1()
+    d11.part_2()
